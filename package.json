@@ -1,0 +1,18 @@
+{
+  "name": "property",
+  "version": "1.0.0",
+  "description": "This is my full stack project using react and nodejs",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "source-map-explorer": "^1.5.0"
+  },
+  "scripts": {
+    "install": "(cd client && yarn) && (cd backend && yarn)",
+    "start": "concurrently \"cd client && PORT=3000 yarn start\" \"cd backend && PORT=3001 yarn start\"",
+    "build": "concurrently \"cd client && yarn build\" \"cd backend && yarn build\"",
+    "start:prod": "cd backend && yarn start:prod",
+    "heroku-postbuild": "yarn build"
+  }
+}
